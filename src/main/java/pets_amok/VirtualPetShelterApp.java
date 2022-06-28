@@ -45,8 +45,8 @@ public class VirtualPetShelterApp {
             myShelter.getShelter();
             System.out.println("");
 
-            System.out.println("Press 1 to feed all organic pets");
-            System.out.println("Press 2 to give water to all organic pets");
+            System.out.println("Press 1 to feed/charge all pets");
+            System.out.println("Press 2 to water/oil all pets");
             System.out.println("Press 3 to to play with pets");
             System.out.println("Press 4 to add a pet");
             System.out.println("Press 5 to let your sister adopt a pet");
@@ -58,8 +58,9 @@ public class VirtualPetShelterApp {
             userChoice = input.nextInt();
 
             if (userChoice == 1){
-//                myShelter.feed();
+                myShelter.feedChargeAll();
                 System.out.println("You fed all your pets");
+                myShelter.TickAll();
             }
             else if(userChoice == 2){
 //                myShelter.watered();

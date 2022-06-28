@@ -32,9 +32,7 @@ public class VirtualPetShelter {
 
     public void getShelter() {
         for (Entry<String, VirtualPet> entry : pets.entrySet()) {
-            System.out.println("Pet name " + entry.getValue().getPetName() + ""
-                    + entry.getValue().getDescription() + " Pet Health " + entry.getValue().getHealth()
-                    + " Pet Happiness " + entry.getValue().getHappiness());
+            entry.getValue().showStatus();
 
         }
     }
@@ -43,11 +41,25 @@ public class VirtualPetShelter {
 
     }
 
-    public void feedAllOrganics() {
+    public void feedChargeAll() {
         for (Entry<String, VirtualPet> entry : pets.entrySet()) {
-            entry.getValue().feed();
+
+            if (entry instanceof OrganicPet) {
+                ((OrganicPet) entry.getValue()).feed();
+            }
+            else if (entry instanceof RoboticPet) {
+                ((RoboticPet) entry.getValue()).addBattery();
+            }
+
 
         }
     }
 
-}
+
+    public void TickAll() {
+        for (Entry<String, VirtualPet> entry : pets.entrySet()) {
+
+            entry.getValue().Tick();
+        }
+    }
+        }

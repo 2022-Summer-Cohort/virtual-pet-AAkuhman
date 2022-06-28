@@ -43,10 +43,10 @@ public class VirtualPetShelterTest {
         underTest.addPet(organicDog1);
         underTest.addPet(roboticCat1);
         underTest.addPet(roboticDog1);
-        underTest.feedAllOrganics();
+        underTest.feedChargeAll();
         assertEquals(organicCat1.getHunger(),55);
         assertEquals(organicDog1.getHunger(),70);
-        assertEquals(0,roboticCat1.getHunger() );
+        assertEquals(0,roboticCat1.getBattery() );
 
     }
 }

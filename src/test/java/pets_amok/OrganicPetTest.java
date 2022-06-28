@@ -80,7 +80,7 @@ public class OrganicPetTest {
         assertEquals(25, underTest.getBoredom());
         assertEquals(30, underTest.getWaste());
         assertEquals(35, underTest.getHappiness());
-        underTest.OrganicTick();
+        underTest.Tick();
         assertEquals(5, underTest.getHunger());
         assertEquals(10, underTest.getThirst());
         assertEquals(15, underTest.getBoredom());
