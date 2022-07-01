@@ -30,7 +30,11 @@ public class VirtualPetShelter {
         return pets.get(petName);
     }
 
-    public void getShelter() {
+    public Map<String, VirtualPet> getPets() {
+        return pets;
+    }
+
+    public void getStatusAll() {
         for (Entry<String, VirtualPet> entry : pets.entrySet()) {
             entry.getValue().showStatus();
 
@@ -44,12 +48,56 @@ public class VirtualPetShelter {
     public void feedChargeAll() {
         for (Entry<String, VirtualPet> entry : pets.entrySet()) {
 
-            if (entry instanceof OrganicPet) {
+            if (entry.getValue() instanceof OrganicPet) {
                 ((OrganicPet) entry.getValue()).feed();
             }
-            else if (entry instanceof RoboticPet) {
+            else if (entry.getValue() instanceof RoboticPet) {
                 ((RoboticPet) entry.getValue()).addBattery();
             }
+
+
+        }
+    }
+    public void walkAll() {
+        for (Entry<String, VirtualPet> entry : pets.entrySet()) {
+
+            if (entry.getValue() instanceof OrganicDog) {
+                ((OrganicDog) entry.getValue()).walk();
+            }
+            else if (entry.getValue() instanceof RoboticDog) {
+                ((RoboticDog) entry.getValue()).walk();
+            }
+
+
+        }
+    }
+
+    public void wasteAll() {
+        for (Entry<String, VirtualPet> entry : pets.entrySet()) {
+
+            if (entry.getValue() instanceof OrganicPet) {
+                ((OrganicPet) entry.getValue()).waste();
+            }
+
+
+        }
+    }
+
+    public void waterAll() {
+        for (Entry<String, VirtualPet> entry : pets.entrySet()) {
+
+            if (entry.getValue() instanceof OrganicPet) {
+                ((OrganicPet) entry.getValue()).watered();
+            }
+
+
+        }
+    }
+
+    public void playAll() {
+        for (Entry<String, VirtualPet> entry : pets.entrySet()) {
+
+            entry.getValue().played();
 
 
         }

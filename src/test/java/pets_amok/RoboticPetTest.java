@@ -40,7 +40,7 @@ public class RoboticPetTest {
         assertEquals(50, underTest.getOil());
         assertEquals(55, underTest.getBattery());
         assertEquals(60, underTest.getHappiness());
-        underTest.roboticTick();
+        underTest.Tick();
         assertEquals(40, underTest.getOil());
         assertEquals(45, underTest.getBattery());
         assertEquals(50, underTest.getHappiness());
@@ -50,7 +50,7 @@ public class RoboticPetTest {
         assertEquals(15, underTest1.getOil());
         assertEquals(20, underTest1.getBattery());
         assertEquals(25, underTest1.getHappiness());
-        underTest1.roboticTick();
+        underTest1.Tick();
         assertEquals(5, underTest1.getOil());
         assertEquals(10, underTest1.getBattery());
         assertEquals(15, underTest1.getHappiness());

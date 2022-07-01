@@ -28,7 +28,9 @@ public abstract class RoboticPet extends VirtualPet{
         this.battery += 20;
         this.happiness += 5;
     }
-    public void roboticTick(){
+
+    @Override
+    public void Tick(){
         this.oil -=10;
         this.battery -=10;
         this.happiness -=10;
